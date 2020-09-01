@@ -1,0 +1,229 @@
+@import './sass/sass-options';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', arial, helvetica, sans-serif;
+    margin: 0;
+
+    color: $primary-font-color;
+}
+main{
+    @include whm(100%,100vh,0);
+
+    background-image: linear-gradient(to right,rgba(0,0,0,.2),rgba(0,0,0,.6),rgba(0,0,0,.6)) ,url(../gallery/background/bmw.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .grid-rows{
+        @include whm(95%,95%,auto);
+        display: grid;
+        grid-template-rows: 10% 45% 45%;
+
+        .grid-row-one{
+            @include whm(100%,100%,0);
+
+            .navbar{
+                width: 100%;
+                @include flexrow(space-between,'');
+
+                padding-top: 2rem;
+
+                .left-nav-items{
+                    @include whm(100%,auto,auto);
+
+                    .fa-bars{
+                        display: flex;
+                        width: 2.1rem;
+
+                        font-size: 2rem;
+                        cursor: pointer;
+
+                        @media only screen and(min-width:1151px){
+                            display: none;
+                        }
+                    }
+
+                    .nav-link{
+                        text-decoration: none;
+                        text-transform: capitalize;
+                        font-size: 1.2rem;
+                        color: $primary-font-color;
+
+                        padding-right: 3rem;
+
+                        @media only screen and(max-width:1150px){
+                            display: none;
+                        }
+                    }
+
+                }
+
+                .right-nav-items{
+                    @include flexrow('',center);
+
+                    .fa-search{
+                        padding-right: 2rem;
+                        font-size: 1.3rem;
+                        cursor: pointer;
+                    }
+                    .form-control{
+                        background: none;
+                        border: none;
+                        outline: none;
+
+                        width: 16rem;
+
+                        font-size: 1.3rem;
+                        color: $primary-font-color;
+                        &:focus{
+                            text-align: center;
+                            &::placeholder{
+                                color: transparent;
+                            }
+                        }
+
+                        @media only screen and(max-width:800px){
+                            width: 8rem;
+                        }
+                        
+                    }
+                    .fa-user-circle{
+                        padding-left: 2rem;
+                        font-size: 2rem;
+                        cursor: pointer;
+
+                        @media only screen and(max-width:1400px){
+                            padding-left: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    //responsive-menu
+    .responsive-menu{
+        @include whm(45%,100vh,0);
+        @include flexcol(space-between,center);
+
+        @media only screen and(max-width:800px){
+            @include whm(100%,100%,auto);
+        }
+
+        position: absolute;
+        z-index: 100;
+        top: 0;
+        left: 0;
+
+        background-image: linear-gradient(to right,rgba(0,0,0,.8),rgba(0,0,0,.8),rgba(0,0,0,.8)) ,url(../gallery/background/porsche.jpg);
+        background-position: 25% center;
+        background-size: cover;
+
+        .menu-container{
+            @include flexcol('',center);
+
+            .menu-txt{
+                text-transform: uppercase;
+                text-shadow: 0 0 2px white;
+                letter-spacing: 2px;
+                font-size: 2.5rem;
+
+                cursor: default;
+            }
+
+            .nav-link{
+                text-decoration: none;
+                text-transform: capitalize;
+                font-size: 1.5rem;
+                color: $primary-font-color;
+                padding: 1rem 0;
+
+                &:hover{
+                    color: white;
+                    letter-spacing: 0.3rem;
+                    transition: ease-in 0.5s;
+                }
+                transition: 0.5s ease;
+
+            }
+        }
+        .exit-container{
+            @include flexcol('',center);
+            
+            background-color: #181818;
+            width: 100%;
+
+            cursor: pointer;
+        }
+    }
+
+
+    .grid-row-two{
+        @include whm(100%,100%,0);
+        @include flexcol(center,flex-end);
+        text-align:right;
+
+        .title-section{
+            font-size: 2rem;
+            color: $title-font-color;
+
+            @media only screen and(max-width:720px){
+                font-size: 1.2rem;
+            }
+
+            .title-desc{
+                color: $secondary-font-color;
+            }
+
+            .button-group{
+                .title-btn{
+                    font-size: 1.4rem;
+                    color: $title-font-color;
+                    font-weight: 500;
+
+                    border: 2px solid $title-font-color;
+                    border-radius: 16px;
+                    background: transparent;
+
+                    padding: 8px 16px;
+
+                    outline: none;
+
+                    &:nth-child(2){
+                        padding: 8px 38px;
+                        margin-left: 1.5rem;
+
+                        @media only screen and(max-width:720px){
+                            padding: 8px 32px;
+                        }
+
+                    }
+                    &:hover{
+                        cursor: pointer;
+                    }
+
+                    @media only screen and(max-width:720px){
+                        font-size: 1rem;
+                    }
+
+                }
+                .active-button{
+                    background-color: $secondary-font-color;
+                    border-color: $secondary-font-color;
+
+                    transition: border-color 0.5s ease;
+                    transition: background-color 0.5s ease;
+
+                    color: #000;
+                }
+            }
+        }
+    }
+
+
+
+}

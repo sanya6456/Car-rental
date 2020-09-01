@@ -1,0 +1,38 @@
+//COLORS
+$primary-font-color: #a7b5b9;
+$title-font-color:#fff;
+$secondary-font-color: #00F1C3;
+
+//def. variables
+$width:width;
+$height:height;
+$margin:margin;
+
+$justify-content:justify-content;
+$align-items:align-items;
+
+
+//MIXINS
+
+//width-height-margin
+@mixin whm($width,$height,$margin) {
+    width: $width;
+    height: $height;
+    margin: $margin;
+}
+
+@mixin flexcol($justify-content,$align-items) {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+
+@mixin flexrow($justify-content,$align-items) {
+    display: flex;
+
+    justify-content: $justify-content;
+    align-items: $align-items;
+}

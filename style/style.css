@@ -227,7 +227,36 @@ main .responsive-menu .menu-container .nav-link:hover {
   transition: ease-in 0.5s;
 }
 
-main .responsive-menu .exit-container {
+main .responsive-menu .media-exit-container {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+main .responsive-menu .media-exit-container .media-icons {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto auto 3rem auto;
+  font-size: 2.5rem;
+}
+
+main .responsive-menu .media-exit-container .media-icons .fab {
+  color: #00F1C3;
+  text-shadow: 0 0 3px #00F1C3;
+}
+
+main .responsive-menu .media-exit-container .media-icons .fab:hover {
+  cursor: pointer;
+}
+
+main .responsive-menu .media-exit-container .exit-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -241,8 +270,11 @@ main .responsive-menu .exit-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #181818;
   width: 100%;
+  background-color: rgba(0, 241, 195, 0.1);
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 1.1rem;
   cursor: pointer;
 }
 
@@ -271,7 +303,7 @@ main .grid-row-two .title-section {
   color: #fff;
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 540px) {
   main .grid-row-two .title-section {
     font-size: 1.2rem;
   }
@@ -297,7 +329,7 @@ main .grid-row-two .title-section .button-group .title-btn:nth-child(2) {
   margin-left: 1.5rem;
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 540px) {
   main .grid-row-two .title-section .button-group .title-btn:nth-child(2) {
     padding: 8px 32px;
   }
@@ -307,13 +339,449 @@ main .grid-row-two .title-section .button-group .title-btn:hover {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 540px) {
   main .grid-row-two .title-section .button-group .title-btn {
     font-size: 1rem;
   }
 }
 
 main .grid-row-two .title-section .button-group .active-button {
+  background-color: #00F1C3;
+  border-color: #00F1C3;
+  -webkit-transition: border-color 0.5s ease;
+  transition: border-color 0.5s ease;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+  color: #000;
+}
+
+main .grid-row-three {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 15% 85%;
+      grid-template-columns: 15% 85%;
+}
+
+@media only screen and (max-width: 1150px) {
+  main .grid-row-three {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+}
+
+main .grid-row-three .grid-col-one {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+@media only screen and (max-width: 1150px) {
+  main .grid-row-three .grid-col-one {
+    display: none;
+  }
+}
+
+main .grid-row-three .grid-col-one .media-icons {
+  width: auto;
+  height: 100%;
+  margin: auto auto 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: "";
+      -ms-flex-align: "";
+          align-items: "";
+}
+
+main .grid-row-three .grid-col-one .media-icons .fa-youtube {
+  margin: 3rem 0;
+}
+
+main .grid-row-three .grid-col-one .media-icons .fa-facebook-f {
+  margin-left: .6rem;
+}
+
+main .grid-row-three .grid-col-one .media-icons .fab {
+  font-size: 2rem;
+  color: #00F1C3;
+  text-shadow: 0 0 3px #00F1C3;
+}
+
+main .grid-row-three .grid-col-one .media-icons .fab:hover {
+  cursor: pointer;
+}
+
+main .grid-row-three .grid-col-two {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: "";
+      -ms-flex-align: "";
+          align-items: "";
+}
+
+@media only screen and (max-width: 985px) {
+  main .grid-row-three .grid-col-two {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: "";
+        -ms-flex-align: "";
+            align-items: "";
+  }
+}
+
+main .grid-row-three .grid-col-two .swiper-container {
+  width: 18rem;
+  height: 18rem;
+  margin: auto;
+}
+
+@media only screen and (min-width: 795px) {
+  main .grid-row-three .grid-col-two .swiper-container {
+    display: none;
+  }
+}
+
+main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .first-cube-card-container, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .second-cube-card-container, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .third-cube-card-container {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  border-radius: 12px;
+  background-color: rgba(0, 241, 195, 0.1);
+}
+
+main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .first-cube-card-container:nth-child(2), main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .second-cube-card-container:nth-child(2), main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .third-cube-card-container:nth-child(2) {
+  margin: auto 1rem 0 1rem;
+}
+
+main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .first-cube-card-container .card-content, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .second-cube-card-container .card-content, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .third-cube-card-container .card-content {
+  width: 85%;
+  height: 100%;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 20% 20% 30% 30%;
+      grid-template-rows: 20% 20% 30% 30%;
+}
+
+main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .first-cube-card-container .card-content .first-card-row, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .second-cube-card-container .card-content .first-card-row, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .third-cube-card-container .card-content .first-card-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .first-cube-card-container .card-content .first-card-row .one-week, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .second-cube-card-container .card-content .first-card-row .one-week, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .third-cube-card-container .card-content .first-card-row .one-week {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .first-cube-card-container .card-content .first-card-row .card-index, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .second-cube-card-container .card-content .first-card-row .card-index, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .third-cube-card-container .card-content .first-card-row .card-index {
+  color: #00F1C3;
+  font-size: 1.8rem;
+  text-shadow: 0 0 25px #00F1C3;
+}
+
+main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .first-cube-card-container .card-content .second-card-row, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .second-cube-card-container .card-content .second-card-row, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .third-cube-card-container .card-content .second-card-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: "";
+      -ms-flex-pack: "";
+          justify-content: "";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .first-cube-card-container .card-content .second-card-row .package-name, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .second-cube-card-container .card-content .second-card-row .package-name, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .third-cube-card-container .card-content .second-card-row .package-name {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #00F1C3;
+}
+
+@media only screen and (max-width: 985px) {
+  main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .first-cube-card-container .card-content .second-card-row .package-name, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .second-cube-card-container .card-content .second-card-row .package-name, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .third-cube-card-container .card-content .second-card-row .package-name {
+    font-size: 1rem;
+  }
+}
+
+main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .first-cube-card-container .card-content .third-card-row, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .second-cube-card-container .card-content .third-card-row, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .third-cube-card-container .card-content .third-card-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+}
+
+main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .first-cube-card-container .card-content .third-card-row .price-string, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .second-cube-card-container .card-content .third-card-row .price-string, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .third-cube-card-container .card-content .third-card-row .price-string {
+  font-size: 1.3rem;
+}
+
+@media only screen and (max-width: 985px) {
+  main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .first-cube-card-container .card-content .third-card-row .price-string, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .second-cube-card-container .card-content .third-card-row .price-string, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .third-cube-card-container .card-content .third-card-row .price-string {
+    font-size: 1.2rem;
+  }
+}
+
+main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .first-cube-card-container .card-content .third-card-row .price-integer, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .second-cube-card-container .card-content .third-card-row .price-integer, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .third-cube-card-container .card-content .third-card-row .price-integer {
+  font-size: 2.1rem;
+}
+
+@media only screen and (max-width: 985px) {
+  main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .first-cube-card-container .card-content .third-card-row .price-integer, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .second-cube-card-container .card-content .third-card-row .price-integer, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .third-cube-card-container .card-content .third-card-row .price-integer {
+    font-size: 1.8rem;
+  }
+}
+
+main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .first-cube-card-container .card-content .fourth-card-row, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .second-cube-card-container .card-content .fourth-card-row, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .third-cube-card-container .card-content .fourth-card-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .first-cube-card-container .card-content .fourth-card-row .card-btn, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .second-cube-card-container .card-content .fourth-card-row .card-btn, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .third-cube-card-container .card-content .fourth-card-row .card-btn {
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: 500;
+  border: 2px solid #fff;
+  border-radius: 16px;
+  background: transparent;
+  padding: 4px 8px;
+  outline: none;
+}
+
+@media only screen and (max-width: 985px) {
+  main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .first-cube-card-container .card-content .fourth-card-row .card-btn, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .second-cube-card-container .card-content .fourth-card-row .card-btn, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .third-cube-card-container .card-content .fourth-card-row .card-btn {
+    padding: 3px 6px;
+    font-size: 1.2rem;
+  }
+}
+
+main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .first-cube-card-container .card-content .fourth-card-row .card-btn:nth-child(1), main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .second-cube-card-container .card-content .fourth-card-row .card-btn:nth-child(1), main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .third-cube-card-container .card-content .fourth-card-row .card-btn:nth-child(1) {
+  padding: 4px 22px;
+}
+
+@media only screen and (max-width: 985px) {
+  main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .first-cube-card-container .card-content .fourth-card-row .card-btn:nth-child(1), main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .second-cube-card-container .card-content .fourth-card-row .card-btn:nth-child(1), main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .third-cube-card-container .card-content .fourth-card-row .card-btn:nth-child(1) {
+    padding: 3px 20px;
+  }
+}
+
+main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .first-cube-card-container .card-content .fourth-card-row .card-btn:hover, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .second-cube-card-container .card-content .fourth-card-row .card-btn:hover, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .third-cube-card-container .card-content .fourth-card-row .card-btn:hover {
+  cursor: pointer;
+}
+
+main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .first-cube-card-container .card-content .fourth-card-row .active-button, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .second-cube-card-container .card-content .fourth-card-row .active-button, main .grid-row-three .grid-col-two .swiper-container .swiper-wrapper .swiper-slide .third-cube-card-container .card-content .fourth-card-row .active-button {
+  background-color: #00F1C3;
+  border-color: #00F1C3;
+  -webkit-transition: border-color 0.5s ease;
+  transition: border-color 0.5s ease;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+  color: #000;
+}
+
+main .grid-row-three .grid-col-two .first-card-container, main .grid-row-three .grid-col-two .second-card-container, main .grid-row-three .grid-col-two .third-card-container {
+  width: 18rem;
+  height: 18rem;
+  margin: auto 0 0 auto;
+  border-radius: 12px;
+  background-color: rgba(0, 241, 195, 0.1);
+}
+
+@media only screen and (max-width: 985px) {
+  main .grid-row-three .grid-col-two .first-card-container, main .grid-row-three .grid-col-two .second-card-container, main .grid-row-three .grid-col-two .third-card-container {
+    width: 15rem;
+    height: 15rem;
+    margin: auto auto 0 auto;
+  }
+  main .grid-row-three .grid-col-two .first-card-container:hover, main .grid-row-three .grid-col-two .second-card-container:hover, main .grid-row-three .grid-col-two .third-card-container:hover {
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 794px) {
+  main .grid-row-three .grid-col-two .first-card-container, main .grid-row-three .grid-col-two .second-card-container, main .grid-row-three .grid-col-two .third-card-container {
+    display: none;
+  }
+}
+
+main .grid-row-three .grid-col-two .first-card-container:nth-child(2), main .grid-row-three .grid-col-two .second-card-container:nth-child(2), main .grid-row-three .grid-col-two .third-card-container:nth-child(2) {
+  margin: auto 1rem 0;
+}
+
+main .grid-row-three .grid-col-two .first-card-container .card-content, main .grid-row-three .grid-col-two .second-card-container .card-content, main .grid-row-three .grid-col-two .third-card-container .card-content {
+  width: 85%;
+  height: 100%;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 20% 20% 30% 30%;
+      grid-template-rows: 20% 20% 30% 30%;
+}
+
+main .grid-row-three .grid-col-two .first-card-container .card-content .first-card-row, main .grid-row-three .grid-col-two .second-card-container .card-content .first-card-row, main .grid-row-three .grid-col-two .third-card-container .card-content .first-card-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .grid-row-three .grid-col-two .first-card-container .card-content .first-card-row .one-week, main .grid-row-three .grid-col-two .second-card-container .card-content .first-card-row .one-week, main .grid-row-three .grid-col-two .third-card-container .card-content .first-card-row .one-week {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+main .grid-row-three .grid-col-two .first-card-container .card-content .first-card-row .card-index, main .grid-row-three .grid-col-two .second-card-container .card-content .first-card-row .card-index, main .grid-row-three .grid-col-two .third-card-container .card-content .first-card-row .card-index {
+  color: #00F1C3;
+  font-size: 1.8rem;
+  text-shadow: 0 0 25px #00F1C3;
+}
+
+main .grid-row-three .grid-col-two .first-card-container .card-content .second-card-row, main .grid-row-three .grid-col-two .second-card-container .card-content .second-card-row, main .grid-row-three .grid-col-two .third-card-container .card-content .second-card-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: "";
+      -ms-flex-pack: "";
+          justify-content: "";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .grid-row-three .grid-col-two .first-card-container .card-content .second-card-row .package-name, main .grid-row-three .grid-col-two .second-card-container .card-content .second-card-row .package-name, main .grid-row-three .grid-col-two .third-card-container .card-content .second-card-row .package-name {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #00F1C3;
+}
+
+@media only screen and (max-width: 985px) {
+  main .grid-row-three .grid-col-two .first-card-container .card-content .second-card-row .package-name, main .grid-row-three .grid-col-two .second-card-container .card-content .second-card-row .package-name, main .grid-row-three .grid-col-two .third-card-container .card-content .second-card-row .package-name {
+    font-size: 1rem;
+  }
+}
+
+main .grid-row-three .grid-col-two .first-card-container .card-content .third-card-row, main .grid-row-three .grid-col-two .second-card-container .card-content .third-card-row, main .grid-row-three .grid-col-two .third-card-container .card-content .third-card-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+}
+
+main .grid-row-three .grid-col-two .first-card-container .card-content .third-card-row .price-string, main .grid-row-three .grid-col-two .second-card-container .card-content .third-card-row .price-string, main .grid-row-three .grid-col-two .third-card-container .card-content .third-card-row .price-string {
+  font-size: 1.3rem;
+}
+
+@media only screen and (max-width: 985px) {
+  main .grid-row-three .grid-col-two .first-card-container .card-content .third-card-row .price-string, main .grid-row-three .grid-col-two .second-card-container .card-content .third-card-row .price-string, main .grid-row-three .grid-col-two .third-card-container .card-content .third-card-row .price-string {
+    font-size: 1.2rem;
+  }
+}
+
+main .grid-row-three .grid-col-two .first-card-container .card-content .third-card-row .price-integer, main .grid-row-three .grid-col-two .second-card-container .card-content .third-card-row .price-integer, main .grid-row-three .grid-col-two .third-card-container .card-content .third-card-row .price-integer {
+  font-size: 2.1rem;
+}
+
+@media only screen and (max-width: 985px) {
+  main .grid-row-three .grid-col-two .first-card-container .card-content .third-card-row .price-integer, main .grid-row-three .grid-col-two .second-card-container .card-content .third-card-row .price-integer, main .grid-row-three .grid-col-two .third-card-container .card-content .third-card-row .price-integer {
+    font-size: 1.8rem;
+  }
+}
+
+main .grid-row-three .grid-col-two .first-card-container .card-content .fourth-card-row, main .grid-row-three .grid-col-two .second-card-container .card-content .fourth-card-row, main .grid-row-three .grid-col-two .third-card-container .card-content .fourth-card-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .grid-row-three .grid-col-two .first-card-container .card-content .fourth-card-row .card-btn, main .grid-row-three .grid-col-two .second-card-container .card-content .fourth-card-row .card-btn, main .grid-row-three .grid-col-two .third-card-container .card-content .fourth-card-row .card-btn {
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: 500;
+  border: 2px solid #fff;
+  border-radius: 16px;
+  background: transparent;
+  padding: 4px 8px;
+  outline: none;
+}
+
+@media only screen and (max-width: 985px) {
+  main .grid-row-three .grid-col-two .first-card-container .card-content .fourth-card-row .card-btn, main .grid-row-three .grid-col-two .second-card-container .card-content .fourth-card-row .card-btn, main .grid-row-three .grid-col-two .third-card-container .card-content .fourth-card-row .card-btn {
+    padding: 3px 6px;
+    font-size: 1.2rem;
+  }
+}
+
+main .grid-row-three .grid-col-two .first-card-container .card-content .fourth-card-row .card-btn:nth-child(1), main .grid-row-three .grid-col-two .second-card-container .card-content .fourth-card-row .card-btn:nth-child(1), main .grid-row-three .grid-col-two .third-card-container .card-content .fourth-card-row .card-btn:nth-child(1) {
+  padding: 4px 22px;
+}
+
+@media only screen and (max-width: 985px) {
+  main .grid-row-three .grid-col-two .first-card-container .card-content .fourth-card-row .card-btn:nth-child(1), main .grid-row-three .grid-col-two .second-card-container .card-content .fourth-card-row .card-btn:nth-child(1), main .grid-row-three .grid-col-two .third-card-container .card-content .fourth-card-row .card-btn:nth-child(1) {
+    padding: 3px 20px;
+  }
+}
+
+main .grid-row-three .grid-col-two .first-card-container .card-content .fourth-card-row .card-btn:hover, main .grid-row-three .grid-col-two .second-card-container .card-content .fourth-card-row .card-btn:hover, main .grid-row-three .grid-col-two .third-card-container .card-content .fourth-card-row .card-btn:hover {
+  cursor: pointer;
+}
+
+main .grid-row-three .grid-col-two .first-card-container .card-content .fourth-card-row .active-button, main .grid-row-three .grid-col-two .second-card-container .card-content .fourth-card-row .active-button, main .grid-row-three .grid-col-two .third-card-container .card-content .fourth-card-row .active-button {
   background-color: #00F1C3;
   border-color: #00F1C3;
   -webkit-transition: border-color 0.5s ease;

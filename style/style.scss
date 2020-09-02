@@ -151,13 +151,37 @@ main{
 
             }
         }
-        .exit-container{
-            @include flexcol('',center);
-            
-            background-color: #181818;
-            width: 100%;
+        .media-exit-container{
+            @include whm(100%,auto,0);
+            .media-icons{
+                width: 80%;
+                @include flexrow(space-around,center);
+                margin: auto auto 3rem auto;
 
-            cursor: pointer;
+                font-size: 2.5rem;
+
+                .fab{
+                    color: $secondary-font-color;
+                    text-shadow: 0 0 3px $secondary-font-color;
+
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+                
+            }
+            .exit-container{
+                @include flexcol('',center);
+                width: 100%;
+                
+                background-color: rgba($color: $secondary-font-color, $alpha: 0.1);
+                
+                color: $title-font-color;
+                letter-spacing: 2px;
+                font-size: 1.1rem;
+
+                cursor: pointer;
+            }
         }
     }
 
@@ -171,7 +195,7 @@ main{
             font-size: 2rem;
             color: $title-font-color;
 
-            @media only screen and(max-width:720px){
+            @media only screen and(max-width:540px){
                 font-size: 1.2rem;
             }
 
@@ -197,7 +221,7 @@ main{
                         padding: 8px 38px;
                         margin-left: 1.5rem;
 
-                        @media only screen and(max-width:720px){
+                        @media only screen and(max-width:540px){
                             padding: 8px 32px;
                         }
 
@@ -206,7 +230,7 @@ main{
                         cursor: pointer;
                     }
 
-                    @media only screen and(max-width:720px){
+                    @media only screen and(max-width:540px){
                         font-size: 1rem;
                     }
 
@@ -224,6 +248,320 @@ main{
         }
     }
 
+    .grid-row-three{
+        @include whm(100%,100%,0);
+        display: grid;
+        grid-template-columns: 15% 85%;
 
+        @media only screen and(max-width:1150px){
+            grid-template-columns: 100%;
+        }
+
+        .grid-col-one{
+            @include whm(100%,100%,0);
+
+            @media only screen and(max-width:1150px){
+                display: none;
+            }
+
+            .media-icons{
+                @include whm(auto,100%,auto auto 0 0);
+                @include flexcol(flex-end,'');
+
+                .fa-youtube{
+                    margin: 3rem 0;
+                }
+                .fa-facebook-f{
+                    margin-left: .6rem;
+                }
+
+                .fab{
+                    font-size: 2rem;
+                    color: $secondary-font-color;
+                    text-shadow: 0 0 3px $secondary-font-color;
+
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+                
+            }
+        }
+
+        .grid-col-two{
+            @include whm(100%,100%,0);
+            @include flexrow(flex-end,'');
+
+            @media only screen and(max-width:985px){
+
+                @include flexrow(space-between,'');
+
+            }
+
+            // SWIPER STARTS FROM X<794PX !!
+            .swiper-container{
+
+                @include whm(18rem,18rem,auto);
+
+                @media only screen and(min-width:795px){
+
+                    display: none;
+    
+                }
+                
+                .swiper-wrapper{
+                    .swiper-slide{
+
+                        .first-cube-card-container,.second-cube-card-container,.third-cube-card-container{
+                            @include whm(100%,100%,auto);
+            
+            
+                            border-radius: 12px;
+                            background-color: rgba($color: $secondary-font-color, $alpha: 0.1);
+            
+                            &:nth-child(2){
+                                margin: auto 1rem 0 1rem;
+                            }
+            
+                            .card-content{
+                                @include whm(85%,100%,auto);
+                                display: grid;
+                                grid-template-rows: 20% 20% 30% 30%;
+            
+                                .first-card-row{
+                                    @include flexrow(space-between,center);
+            
+                                    .one-week{
+                                        color: $title-font-color;
+                                        font-size: 1.2rem;
+                                    }
+                                    .card-index{
+                                        color: $secondary-font-color;
+                                        font-size: 1.8rem;
+                                        text-shadow: 0 0 25px $secondary-font-color;
+                                    }
+                                }
+            
+                                .second-card-row{
+                                    @include flexrow('',center);
+            
+                                    .package-name{
+                                        font-size: 1.4rem;
+                                        font-weight: 400;
+                                        color: $secondary-font-color;
+            
+                                        @media only screen and(max-width:985px){
+                                            font-size: 1rem;
+                                        }
+            
+                                    }
+                                }
+                                .third-card-row{
+                                    @include flexrow(space-between,center);
+                                    color: $title-font-color;
+                                    .price-string{
+                                        font-size: 1.3rem;
+            
+                                        @media only screen and(max-width:985px){
+                                            font-size: 1.2rem;
+                                        }
+            
+                                    }
+                                    .price-integer{
+                                        font-size: 2.1rem;
+            
+                                        @media only screen and(max-width:985px){
+                                            font-size: 1.8rem;
+                                        }
+            
+                                    }
+                                }
+                                .fourth-card-row{
+                                    @include flexrow(space-between,center);
+            
+                                    .card-btn{
+                                        font-size: 1.4rem;
+                                        color: $title-font-color;
+                                        font-weight: 500;
+            
+                                        border: 2px solid $title-font-color;
+                                        border-radius: 16px;
+                                        background: transparent;
+            
+                                        padding: 4px 8px;
+            
+                                        outline: none;
+            
+                                        @media only screen and(max-width:985px){
+                                            padding: 3px 6px;
+            
+                                            font-size: 1.2rem;
+                                        }
+            
+                                        &:nth-child(1){
+                                            padding: 4px 22px;
+            
+                                            @media only screen and(max-width:985px){
+                                                padding: 3px 20px;
+                                            }
+            
+                                        }
+                                        &:hover{
+                                            cursor: pointer;
+                                        }
+                                    }
+            
+                                    .active-button{
+                                        background-color: $secondary-font-color;
+                                        border-color: $secondary-font-color;
+                    
+                                        transition: border-color 0.5s ease;
+                                        transition: background-color 0.5s ease;
+                    
+                                        color: #000;
+                                    }
+            
+                                }
+                            }
+            
+                        }
+
+                    }
+
+                }
+            }
+
+
+            .first-card-container,.second-card-container,.third-card-container{
+                @include whm(18rem,18rem,auto 0 0 auto);
+
+                @media only screen and(max-width:985px){
+
+                    @include whm(15rem,15rem,auto auto 0 auto);
+
+                    &:hover{
+                        cursor: pointer;
+                    }
+                    
+                }
+
+                @media only screen and(max-width:794px){
+
+                    display: none;
+    
+                }
+
+
+                border-radius: 12px;
+                background-color: rgba($color: $secondary-font-color, $alpha: 0.1);
+
+                &:nth-child(2){
+                    margin: auto 1rem 0;
+                }
+
+                .card-content{
+                    @include whm(85%,100%,auto);
+                    display: grid;
+                    grid-template-rows: 20% 20% 30% 30%;
+
+                    .first-card-row{
+                        @include flexrow(space-between,center);
+
+                        .one-week{
+                            color: $title-font-color;
+                            font-size: 1.2rem;
+                        }
+                        .card-index{
+                            color: $secondary-font-color;
+                            font-size: 1.8rem;
+                            text-shadow: 0 0 25px $secondary-font-color;
+                        }
+                    }
+
+                    .second-card-row{
+                        @include flexrow('',center);
+
+                        .package-name{
+                            font-size: 1.4rem;
+                            font-weight: 400;
+                            color: $secondary-font-color;
+
+                            @media only screen and(max-width:985px){
+                                font-size: 1rem;
+                            }
+
+                        }
+                    }
+                    .third-card-row{
+                        @include flexrow(space-between,center);
+                        color: $title-font-color;
+                        .price-string{
+                            font-size: 1.3rem;
+
+                            @media only screen and(max-width:985px){
+                                font-size: 1.2rem;
+                            }
+
+                        }
+                        .price-integer{
+                            font-size: 2.1rem;
+
+                            @media only screen and(max-width:985px){
+                                font-size: 1.8rem;
+                            }
+
+                        }
+                    }
+                    .fourth-card-row{
+                        @include flexrow(space-between,center);
+
+                        .card-btn{
+                            font-size: 1.4rem;
+                            color: $title-font-color;
+                            font-weight: 500;
+
+                            border: 2px solid $title-font-color;
+                            border-radius: 16px;
+                            background: transparent;
+
+                            padding: 4px 8px;
+
+                            outline: none;
+
+                            @media only screen and(max-width:985px){
+                                padding: 3px 6px;
+
+                                font-size: 1.2rem;
+                            }
+
+                            &:nth-child(1){
+                                padding: 4px 22px;
+
+                                @media only screen and(max-width:985px){
+                                    padding: 3px 20px;
+                                }
+
+                            }
+                            &:hover{
+                                cursor: pointer;
+                            }
+                        }
+
+                        .active-button{
+                            background-color: $secondary-font-color;
+                            border-color: $secondary-font-color;
+        
+                            transition: border-color 0.5s ease;
+                            transition: background-color 0.5s ease;
+        
+                            color: #000;
+                        }
+
+                    }
+                }
+
+            }
+        }
+    }
 
 }

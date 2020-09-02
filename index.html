@@ -7,7 +7,9 @@
 
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.css">
 
+    <script src="./node_modules/swiper/swiper-bundle.js"></script>
     <script src="./node_modules/jquery/dist/jquery.js"></script>
     <script src="./main/main.js"></script>
 
@@ -26,10 +28,18 @@
                 <a href="#" class="nav-link">conditions</a>
                 <a href="#" class="nav-link">dealership</a>
             </div>
-            <div class="exit-container">
-                <h2 class="exit">Exit</h2>
+            <div class="media-exit-container">
+                <div class="media-icons">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <div class="exit-container">
+                    <h2 class="exit">Exit</h2>
+                </div>
             </div>
         </div>
+
 
 
         <div class="grid-rows">
@@ -73,6 +83,84 @@
                 </div>
 
                 <div class="grid-col-two">
+
+
+                    <!--  swiper initialize X < 794px  !!! -->
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="first-cube-card-container">
+                                    <div class="card-content">
+                                        <div class="first-card-row">
+                                            <h5 class="one-week">1 week</h5>
+                                            <h5 class="card-index">01</h5>
+                                        </div>
+                                        <div class="second-card-row">
+                                            <h5 class="package-name">Starter rental package</h5>
+                                        </div>
+                                        <div class="third-card-row">
+                                            <h5 class="price-string">Price</h5>
+                                            <h5 class="price-integer">&dollar; 300</h5>
+                                        </div>
+                                        <div class="fourth-card-row">
+                                            <button class="card-btn">More</button>
+                                            <button class="card-btn active-button">To begin</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="swiper-slide">
+                                <div class="second-cube-card-container">
+                                    <div class="card-content">
+                                        <div class="first-card-row">
+                                            <h5 class="one-week">2 week</h5>
+                                            <h5 class="card-index">02</h5>
+                                        </div>
+                                        <div class="second-card-row">
+                                            <h5 class="package-name">Classical rental package</h5>
+                                        </div>
+                                        <div class="third-card-row">
+                                            <h5 class="price-string">Price</h5>
+                                            <h5 class="price-integer">&dollar; 500</h5>
+                                        </div>
+                                        <div class="fourth-card-row">
+                                            <button class="card-btn">More</button>
+                                            <button class="card-btn active-button">To begin</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="swiper-slide">
+                                <div class="third-cube-card-container">
+                                    <div class="card-content">
+                                        <div class="first-card-row">
+                                            <h5 class="one-week">3 week</h5>
+                                            <h5 class="card-index">03</h5>
+                                        </div>
+                                        <div class="second-card-row">
+                                            <h5 class="package-name">Premium rental package</h5>
+                                        </div>
+                                        <div class="third-card-row">
+                                            <h5 class="price-string">Price</h5>
+                                            <h5 class="price-integer">&dollar; 650</h5>
+                                        </div>
+                                        <div class="fourth-card-row">
+                                            <button class="card-btn">More</button>
+                                            <button class="card-btn active-button">To begin</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Normal web display !! -->
                     <div class="first-card-container">
                         <div class="card-content">
                             <div class="first-card-row">
@@ -87,8 +175,8 @@
                                 <h5 class="price-integer">&dollar; 300</h5>
                             </div>
                             <div class="fourth-card-row">
-                                <button class="more">More</button>
-                                <button class="to-begin">To begin</button>
+                                <button class="card-btn">More</button>
+                                <button class="card-btn active-button">To begin</button>
                             </div>
                         </div>
                     </div>
@@ -107,8 +195,8 @@
                                 <h5 class="price-integer">&dollar; 500</h5>
                             </div>
                             <div class="fourth-card-row">
-                                <button class="more">More</button>
-                                <button class="to-begin">To begin</button>
+                                <button class="card-btn">More</button>
+                                <button class="card-btn active-button">To begin</button>
                             </div>
                         </div>
                     </div>
@@ -127,8 +215,8 @@
                                 <h5 class="price-integer">&dollar; 650</h5>
                             </div>
                             <div class="fourth-card-row">
-                                <button class="more">More</button>
-                                <button class="to-begin">To begin</button>
+                                <button class="card-btn">More</button>
+                                <button class="card-btn active-button">To begin</button>
                             </div>
                         </div>
                     </div>
